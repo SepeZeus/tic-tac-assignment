@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tic-tac-assignment", "tic-tac-assignment\tic-tac-assignment.csproj", "{A94A13F1-A813-4F6B-9BDE-48B9B2CECC24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A94A13F1-A813-4F6B-9BDE-48B9B2CECC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A94A13F1-A813-4F6B-9BDE-48B9B2CECC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A94A13F1-A813-4F6B-9BDE-48B9B2CECC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A94A13F1-A813-4F6B-9BDE-48B9B2CECC24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F2EEEE3-6326-49C1-A081-8F6C3ACD44AC}
+	EndGlobalSection
+EndGlobal
