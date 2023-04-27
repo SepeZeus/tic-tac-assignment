@@ -7,6 +7,7 @@ namespace tic_tac_assignment
         public Form1()
         {
             InitializeComponent();
+
             //Add buttons to list of buttons initially
             buttons.Add(button1); 
             buttons.Add(button2);
@@ -181,12 +182,15 @@ namespace tic_tac_assignment
 
         }
 
+        //restart game/start a new game
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             XorO = 0;
             win = false;
             label1.Text = "Play Now";
-            foreach (Control c in panel2.Controls)
+
+            //reset buttons to empty
+            foreach (Control c in panel2.Controls) 
             {
                 if (c is Button)
                 {
@@ -209,23 +213,23 @@ namespace tic_tac_assignment
 
         }
 
-        private void rulesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void rulesToolStripMenuItem_Click(object sender, EventArgs e) //Show rules
         {
             MessageBox.Show("Get three of the same X or O in horizontal, vertical or diagonal to win");
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) //Player has Exited the game (Application)
         {
             Application.Exit();
         }
 
-        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        private void xToolStripMenuItem_Click(object sender, EventArgs e) //Player has chosen to play as X
         {
             player = Player.X;
             XorO = 0;
         }
 
-        private void oToolStripMenuItem_Click(object sender, EventArgs e)
+        private void oToolStripMenuItem_Click(object sender, EventArgs e) //Player has chosen to play as O
         {
             player = Player.O;
             XorO = 1;
