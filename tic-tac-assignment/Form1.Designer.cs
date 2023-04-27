@@ -40,8 +40,16 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            menuStrip1 = new MenuStrip();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            newGameToolStripMenuItem = new ToolStripMenuItem();
+            rulesToolStripMenuItem = new ToolStripMenuItem();
+            choosePlayerToolStripMenuItem = new ToolStripMenuItem();
+            xToolStripMenuItem = new ToolStripMenuItem();
+            oToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -90,7 +98,7 @@
             button9.FlatAppearance.MouseOverBackColor = Color.Lavender;
             button9.FlatStyle = FlatStyle.Flat;
             button9.Font = new Font("UD Digi Kyokasho NK-B", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            button9.ForeColor = Color.Black;
+            button9.ForeColor = Color.Transparent;
             button9.Location = new Point(389, 387);
             button9.Name = "button9";
             button9.Size = new Size(165, 165);
@@ -105,7 +113,7 @@
             button8.FlatAppearance.MouseOverBackColor = Color.Lavender;
             button8.FlatStyle = FlatStyle.Flat;
             button8.Font = new Font("UD Digi Kyokasho NK-B", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            button8.ForeColor = Color.Black;
+            button8.ForeColor = Color.Transparent;
             button8.Location = new Point(210, 387);
             button8.Name = "button8";
             button8.Size = new Size(165, 165);
@@ -120,7 +128,7 @@
             button7.FlatAppearance.MouseOverBackColor = Color.Lavender;
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("UD Digi Kyokasho NK-B", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.ForeColor = Color.Black;
+            button7.ForeColor = Color.Transparent;
             button7.Location = new Point(32, 387);
             button7.Name = "button7";
             button7.Size = new Size(165, 165);
@@ -135,7 +143,7 @@
             button6.FlatAppearance.MouseOverBackColor = Color.Lavender;
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("UD Digi Kyokasho NK-B", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = Color.Black;
+            button6.ForeColor = Color.Transparent;
             button6.Location = new Point(389, 205);
             button6.Name = "button6";
             button6.Size = new Size(165, 165);
@@ -150,7 +158,7 @@
             button5.FlatAppearance.MouseOverBackColor = Color.Lavender;
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("UD Digi Kyokasho NK-B", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.Black;
+            button5.ForeColor = Color.Transparent;
             button5.Location = new Point(210, 205);
             button5.Name = "button5";
             button5.Size = new Size(165, 165);
@@ -165,7 +173,7 @@
             button4.FlatAppearance.MouseOverBackColor = Color.Lavender;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("UD Digi Kyokasho NK-B", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.Black;
+            button4.ForeColor = Color.Transparent;
             button4.Location = new Point(32, 205);
             button4.Name = "button4";
             button4.Size = new Size(165, 165);
@@ -180,7 +188,7 @@
             button3.FlatAppearance.MouseOverBackColor = Color.Lavender;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("UD Digi Kyokasho NK-B", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.Black;
+            button3.ForeColor = Color.Transparent;
             button3.Location = new Point(389, 25);
             button3.Name = "button3";
             button3.Size = new Size(165, 165);
@@ -195,7 +203,7 @@
             button2.FlatAppearance.MouseOverBackColor = Color.Lavender;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("UD Digi Kyokasho NK-B", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.Black;
+            button2.ForeColor = Color.Transparent;
             button2.Location = new Point(209, 25);
             button2.Name = "button2";
             button2.Size = new Size(166, 165);
@@ -210,7 +218,7 @@
             button1.FlatAppearance.MouseOverBackColor = Color.Lavender;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("UD Digi Kyokasho NK-B", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.Black;
+            button1.ForeColor = Color.Transparent;
             button1.Location = new Point(32, 25);
             button1.Name = "button1";
             button1.Size = new Size(165, 165);
@@ -218,19 +226,76 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += btn_click;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { exitToolStripMenuItem, newGameToolStripMenuItem, choosePlayerToolStripMenuItem, rulesToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(625, 28);
+            menuStrip1.TabIndex = 2;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(47, 24);
+            exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
+            // 
+            // newGameToolStripMenuItem
+            // 
+            newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
+            newGameToolStripMenuItem.Size = new Size(96, 24);
+            newGameToolStripMenuItem.Text = "New Game";
+            newGameToolStripMenuItem.Click += newGameToolStripMenuItem_Click;
+            // 
+            // rulesToolStripMenuItem
+            // 
+            rulesToolStripMenuItem.Name = "rulesToolStripMenuItem";
+            rulesToolStripMenuItem.Size = new Size(58, 24);
+            rulesToolStripMenuItem.Text = "Rules";
+            rulesToolStripMenuItem.Click += rulesToolStripMenuItem_Click;
+            // 
+            // choosePlayerToolStripMenuItem
+            // 
+            choosePlayerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { xToolStripMenuItem, oToolStripMenuItem });
+            choosePlayerToolStripMenuItem.Name = "choosePlayerToolStripMenuItem";
+            choosePlayerToolStripMenuItem.Size = new Size(116, 24);
+            choosePlayerToolStripMenuItem.Text = "Choose Player";
+            // 
+            // xToolStripMenuItem
+            // 
+            xToolStripMenuItem.Name = "xToolStripMenuItem";
+            xToolStripMenuItem.Size = new Size(224, 26);
+            xToolStripMenuItem.Text = "X";
+            xToolStripMenuItem.Click += xToolStripMenuItem_Click;
+            // 
+            // oToolStripMenuItem
+            // 
+            oToolStripMenuItem.Name = "oToolStripMenuItem";
+            oToolStripMenuItem.Size = new Size(224, 26);
+            oToolStripMenuItem.Text = "O";
+            oToolStripMenuItem.Click += oToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(625, 826);
+            ClientSize = new Size(625, 765);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -247,5 +312,12 @@
         private Button button9;
         private Button button8;
         private Button button7;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem newGameToolStripMenuItem;
+        private ToolStripMenuItem rulesToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem choosePlayerToolStripMenuItem;
+        private ToolStripMenuItem xToolStripMenuItem;
+        private ToolStripMenuItem oToolStripMenuItem;
     }
 }
