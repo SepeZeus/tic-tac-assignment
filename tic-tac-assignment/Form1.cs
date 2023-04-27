@@ -8,7 +8,7 @@ namespace tic_tac_assignment
             InitializeComponent();
 
             //Add buttons to list of buttons initially
-            buttons.Add(button1); 
+            buttons.Add(button1);
             buttons.Add(button2);
             buttons.Add(button3);
             buttons.Add(button4);
@@ -26,7 +26,7 @@ namespace tic_tac_assignment
         bool draw = false;
         bool gameStarted = false;
         bool CPUTurn = false;
-        
+
         public enum Player
         {
             X, O
@@ -52,7 +52,7 @@ namespace tic_tac_assignment
                         label1.Text = "O's Turn Now";
                         if (player == Player.X) //if player is X, then CPU is O
                             CPUTurn = true;
-  
+
                         buttons.Remove(btn);
                     }
                     else
@@ -173,15 +173,11 @@ namespace tic_tac_assignment
             b3.ForeColor = Color.White;
 
         }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         //restart game/start a new game
         private async void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(CPUTurn) //wait for CPU turn to end
+            if (CPUTurn) //wait for CPU turn to end
                 await Task.Delay(427);
             win = false;
             draw = false;
@@ -195,7 +191,7 @@ namespace tic_tac_assignment
                 XorO = 1;
 
             //reset buttons to empty
-            foreach (Control c in panel2.Controls) 
+            foreach (Control c in panel2.Controls)
             {
                 if (c is Button)
                 {

@@ -43,10 +43,10 @@
             menuStrip1 = new MenuStrip();
             exitToolStripMenuItem = new ToolStripMenuItem();
             newGameToolStripMenuItem = new ToolStripMenuItem();
-            rulesToolStripMenuItem = new ToolStripMenuItem();
             choosePlayerToolStripMenuItem = new ToolStripMenuItem();
             xToolStripMenuItem = new ToolStripMenuItem();
             oToolStripMenuItem = new ToolStripMenuItem();
+            rulesToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -60,7 +60,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(585, 92);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // label1
             // 
@@ -250,13 +249,6 @@
             newGameToolStripMenuItem.Text = "New Game";
             newGameToolStripMenuItem.Click += newGameToolStripMenuItem_Click;
             // 
-            // rulesToolStripMenuItem
-            // 
-            rulesToolStripMenuItem.Name = "rulesToolStripMenuItem";
-            rulesToolStripMenuItem.Size = new Size(58, 24);
-            rulesToolStripMenuItem.Text = "Rules";
-            rulesToolStripMenuItem.Click += rulesToolStripMenuItem_Click;
-            // 
             // choosePlayerToolStripMenuItem
             // 
             choosePlayerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { xToolStripMenuItem, oToolStripMenuItem });
@@ -267,16 +259,23 @@
             // xToolStripMenuItem
             // 
             xToolStripMenuItem.Name = "xToolStripMenuItem";
-            xToolStripMenuItem.Size = new Size(224, 26);
+            xToolStripMenuItem.Size = new Size(103, 26);
             xToolStripMenuItem.Text = "X";
             xToolStripMenuItem.Click += xToolStripMenuItem_Click;
             // 
             // oToolStripMenuItem
             // 
             oToolStripMenuItem.Name = "oToolStripMenuItem";
-            oToolStripMenuItem.Size = new Size(224, 26);
+            oToolStripMenuItem.Size = new Size(103, 26);
             oToolStripMenuItem.Text = "O";
             oToolStripMenuItem.Click += oToolStripMenuItem_Click;
+            // 
+            // rulesToolStripMenuItem
+            // 
+            rulesToolStripMenuItem.Name = "rulesToolStripMenuItem";
+            rulesToolStripMenuItem.Size = new Size(58, 24);
+            rulesToolStripMenuItem.Text = "Rules";
+            rulesToolStripMenuItem.Click += rulesToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -288,7 +287,7 @@
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
-            Text = "Form1";
+            Text = "TicTacToe";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
