@@ -1,4 +1,3 @@
-using System.Diagnostics;
 
 namespace tic_tac_assignment
 {
@@ -25,6 +24,7 @@ namespace tic_tac_assignment
 
         bool win = false;
         bool draw = false;
+        bool gameStarted = false;
         bool CPUTurn = false;
         
         public enum Player
@@ -41,10 +41,9 @@ namespace tic_tac_assignment
             if (btn.Text.Equals(""))
             {
 
-                if (!win && !draw)
+                if (!win && !draw && !CPUTurn)
                 {
-                    Debug.WriteLine(btn.Name);
-
+                    gameStarted = true;
                     if (XorO % 2 == 0)
                     {
                         btn.Text = "X";
@@ -53,8 +52,7 @@ namespace tic_tac_assignment
                         label1.Text = "O's Turn Now";
                         if (player == Player.X) //if player is X, then CPU is O
                             CPUTurn = true;
-                        else
-                            CPUTurn = false;
+  
                         buttons.Remove(btn);
                     }
                     else
@@ -65,8 +63,6 @@ namespace tic_tac_assignment
                         label1.Text = "X's Turn Now";
                         if (player == Player.O) //if player is O, then CPU is X
                             CPUTurn = true;
-                        else
-                            CPUTurn = false;
                         buttons.Remove(btn);
                     }
                     XorO++;
@@ -78,14 +74,14 @@ namespace tic_tac_assignment
 
             }
         }
-
         //CPU moves randomly
-        private void CPU_Move()
+        private async void CPU_Move()
         {
+            await Task.Delay(427);
             Random random = new Random();
-            Debug.WriteLine(buttons.Count);
             int randInd = random.Next(0, buttons.Count);
             Button randBtn = buttons[randInd];
+            CPUTurn = false;
             randBtn.PerformClick();
         }
 
@@ -183,11 +179,20 @@ namespace tic_tac_assignment
         }
 
         //restart game/start a new game
-        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            XorO = 0;
+            if(CPUTurn) //wait for CPU turn to end
+                await Task.Delay(427);
             win = false;
+            draw = false;
+            gameStarted = false;
+            CPUTurn = false;
             label1.Text = "Play Now";
+
+            if (player == Player.X)
+                XorO = 0;
+            else
+                XorO = 1;
 
             //reset buttons to empty
             foreach (Control c in panel2.Controls) 
@@ -225,14 +230,28 @@ namespace tic_tac_assignment
 
         private void xToolStripMenuItem_Click(object sender, EventArgs e) //Player has chosen to play as X
         {
-            player = Player.X;
-            XorO = 0;
+            if (!gameStarted)
+            {
+                player = Player.X;
+                XorO = 0;
+            }
+            else
+            {
+                MessageBox.Show("Cannot change player type during active game");
+            }
         }
 
         private void oToolStripMenuItem_Click(object sender, EventArgs e) //Player has chosen to play as O
         {
-            player = Player.O;
-            XorO = 1;
+            if (!gameStarted)
+            {
+                player = Player.O;
+                XorO = 1;
+            }
+            else
+            {
+                MessageBox.Show("Cannot change player type during active game");
+            }
         }
     }
 }
