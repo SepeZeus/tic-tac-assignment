@@ -28,12 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            panel1 = new Panel();
+            panel2 = new Panel();
+            label1 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Crimson;
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(43, 27);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(522, 92);
+            panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Crimson;
+            panel2.Controls.Add(button9);
+            panel2.Controls.Add(button8);
+            panel2.Controls.Add(button7);
+            panel2.Controls.Add(button6);
+            panel2.Controls.Add(button5);
+            panel2.Controls.Add(button4);
+            panel2.Controls.Add(button3);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(button1);
+            panel2.Location = new Point(12, 161);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(585, 580);
+            panel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("UD Digi Kyokasho NK-B", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(14, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(225, 70);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(31, 25);
+            button1.Name = "button1";
+            button1.Size = new Size(165, 165);
+            button1.TabIndex = 0;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(208, 25);
+            button2.Name = "button2";
+            button2.Size = new Size(166, 165);
+            button2.TabIndex = 1;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(388, 25);
+            button3.Name = "button3";
+            button3.Size = new Size(165, 165);
+            button3.TabIndex = 2;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(31, 205);
+            button4.Name = "button4";
+            button4.Size = new Size(165, 165);
+            button4.TabIndex = 3;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(209, 205);
+            button5.Name = "button5";
+            button5.Size = new Size(165, 165);
+            button5.TabIndex = 4;
+            button5.Text = "button5";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(388, 205);
+            button6.Name = "button6";
+            button6.Size = new Size(165, 165);
+            button6.TabIndex = 5;
+            button6.Text = "button6";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(31, 387);
+            button7.Name = "button7";
+            button7.Size = new Size(165, 165);
+            button7.TabIndex = 6;
+            button7.Text = "button7";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(209, 387);
+            button8.Name = "button8";
+            button8.Size = new Size(165, 165);
+            button8.TabIndex = 7;
+            button8.Text = "button8";
+            button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            button9.Location = new Point(388, 387);
+            button9.Name = "button9";
+            button9.Size = new Size(165, 165);
+            button9.TabIndex = 8;
+            button9.Text = "button9";
+            button9.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(625, 826);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Name = "Form1";
+            Text = "Form1";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panel1;
+        private Panel panel2;
+        private Label label1;
+        private Button button6;
+        private Button button5;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button1;
+        private Button button9;
+        private Button button8;
+        private Button button7;
     }
 }
